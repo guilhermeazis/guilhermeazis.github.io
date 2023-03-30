@@ -12,22 +12,28 @@ header,main{
 /* Index */
 
 /* Barra */
-nav{
+nav {
   padding: 5px;
   position: fixed;
-  background-color: rgb(222, 242, 255);
+  background-color: rgb(134, 178, 248);
   top: 0;
   left: 0;
   right: 0;
   height: 40px;
   padding: 8px;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-items: center;
 } 
-/* .logo {} */
+
+.soon a {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
 
 .soon img{
-  margin-left: 2px;
-  margin-bottom: 2px;
   width: 40px;
   height: 40px;
   border-radius: 20px;
@@ -52,17 +58,15 @@ header{
 
 .foto_profile img{
   border-radius: 50%;
-  height: 190px;
-  width: 190px;
+  height: 170px;
+  width: 170px;
   position: absolute;
   top: 150px;
-  left: 35%;
+  left: 10%;
   border: 2px solid rgb(34, 91, 214);
-} 
+}
 
-/* .description{
-  position: absolute;
-} */
+/* Na refatoração usar css grid */
 
 .description img{
   width: 18px;
@@ -72,7 +76,8 @@ header{
 .description-information{
   position: relative;
   top: 85px;
-  margin: 0 10%;
+  /* margin: 0 10%; */
+  text-align: center;
 }
 
 .description-information ul li{
@@ -120,6 +125,11 @@ main{
 .menu{
   text-align: center;
   /* background-color: rgb(34, 91, 214); */
+}
+.menu ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu li{
@@ -218,3 +228,18 @@ main{
     text-align: right;
     text-decoration: none;
   } */
+/* Rodapé */
+footer {
+  color: black;
+  background-color: rgb(134, 178, 248);
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+footer p {
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
