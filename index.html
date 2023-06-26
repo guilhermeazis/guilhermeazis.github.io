@@ -4,56 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Guilherme Azis">
     <link rel="shortcut icon" href="./imgs/astronauta.jpeg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
     <!-- <link rel="stylesheet" media="screen and (max-width: 950px)" href="./css/style_max1000.css"> -->
     <title>Portfólio</title>
 </head>
 <body>
     <nav>
-        <div class="soon">
-            <a href="./index.html"><img src="./imgs/astronauta.jpeg" alt=""></a>
-        </div>
+        <img src="./icons/astronauta.png" alt="Astronauta">
     </nav>
     <header>
-        <div class="profile">
-            <img src="./imgs/background_perfil_programador.jpg" alt="">
-            <div class="foto_profile">
-                <img src="./imgs/foto_perfil.png" alt="">
-            </div>
-        </div>
+        <div class="container-header"></div>
         <div class="description">
-            <div class="follow-buttom">
-                <a href="https://www.linkedin.com/in/guilherme-azis-2ab85b121/" target="_blank" rel="noopener noreferrer"> Seguir</a>
-                <img src="./icons/icon-linkedin.png" alt="">
+            <div class="divImgPerfil">
+                <img id="imagemPerfil" src="./imgs/foto_perfil.png" alt="">
+                <a id="follow" href="https://twitter.com/AzisGui" target="_blank">
+                    <span>Seguir</span>
+                    <img class="icon" src="/icons/icons8-twitter-30.png" alt="twitter">
+                </a>
             </div>
-            <div class="description-information">
-                <h1>Guillherme Azis Pinto</h1>
-                <p>Explorando novas fronteiras, com linhas de código <img src="./icons/foguete.png" alt=""></p><br>
-                <p>Estudante de desenvolvimento Web</p><br>
-                <ul>
-                    <!-- <li></li> -->
-                    <li><i class="fa-solid fa-link"></i> <a href="./links.html" target="_blank" rel="noopener noreferrer">links</a></li>
-                    <li><i class="fa-solid fa-cake-candles"></i> 05 de Junho</li>
-                    <li><i class="fa-solid fa-calendar-days"></i> Entrei em Fevereiro de 2023</li>
-                </ul>
+            <div class="text">
+                <h1>Guilherme Azis</h1>
+                <p>Tornando sonhos em realidade com códigos!
+                    <img class="icon" src="/icons/rocket.svg" alt="rocket">
+                </p>
+                <p>Desenvolvedor Web trilhando a jornada.</p>
+            </div>
+            <div class="information">
+                <span>
+                    <i class="fa-solid fa-briefcase"></i> 
+                    Disponível
+                </span>
+                <span>
+                    <i class="fa-solid fa-link"></i>
+                    <a href=""></a>Links
+                </span>
+                <span>
+                    <i class="fa-solid fa-cake-candles"></i>
+                    05 de junho
+                </span>
+                <span>
+                    <i class="fa-regular fa-calendar"></i>
+                    Entrou em junho de 2023
+                </span>
             </div>
         </div>
     </header>
     <main>
-        <div class="menu">
-            <ul>
-                <li><a href="">Feed</a></li>
-                <li><a href="">Sobre</a></li>
-                <li><a href="">Realizações</a></li>
-                <li><a href="">Visitantes</a></li>
-            </ul>
-        </div>   
+        <ul class="menu">
+            <li>
+                <a href gap-link="feed.html" gap-destino=".pagina">
+                    <span class="selected">Feed</span>    
+                </a>
+            </li>
+            <li>
+                <a href gap-link="sobre.html" gap-destino=".pagina">
+                    <span>Sobre</span>
+                </a>
+            </li>
+            <li>
+                <a href gap-link="" gap-destino=".pagina">
+                   <span>Conteúdo</span>
+                </a>
+            </li>
+            <li class="teste">
+                <a href gap-link="" gap-destino=".pagina">
+                    <span>Visitas</span>
+                </a>
+            </li>
+        </ul>
+        <div class="pagina"></div>
     </main>
     <footer>
-        <p>Direitos reservados à Guilherme Azis Pinto©</p>
+        <div class="container-footer">
+            <div class="footer-links">
+                <a href="https://twitter.com/AzisGui" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src="./icons/icons8-twitter.svg" alt="">
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src="./icons/icons8-instagram.svg" alt="">
+                </a>
+                <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img class="icon" src="./icons/icons8-github.svg" alt="">
+                </a>
+            </div>
+            <div class="footer-author">
+                GuiAzis © 
+                <span>2023</span>
+            </div>
+        </div>
     </footer>
 </body>
-<!-- <script src="./javascript/index.js"></script> -->
+<script src="./js/javascript.js"></script>
 </html>
