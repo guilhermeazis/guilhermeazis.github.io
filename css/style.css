@@ -193,11 +193,7 @@ body {
 
 /* feed.html */
 
-.post {
-
-}
-
 .timeLine {
   display: grid;
-  grid-template-rows: ;
+  /* grid-template-rows: ; */
 }
