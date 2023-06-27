@@ -8,21 +8,30 @@ a {
   text-decoration: none;
 }
 
+p {
+  text-align: justify;
+}
+
+.icon-30 {
+  width: 30px;
+}
+
 /* Index.html */
+/* header */
 nav {
   grid-area: nav;
   background-color: #86b2f8;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   height: 60px;
-  z-index: 1;
+  z-index: 100;
 }
 
-nav > img {
+nav img {
   height: 40px;
   margin-left: 10px;
 }
@@ -34,7 +43,7 @@ nav > img {
   width: 100%;
 }
 
-#imagemPerfil {
+#imagem-perfil {
   z-index: 1;
   border-radius: 100%;
   height: 150px;
@@ -66,11 +75,7 @@ nav > img {
   width: 25px;
 }
 
-.icon {
-  width: 30px;
-}
-
-.divImgPerfil {
+.div-img-perfil {
   grid-area: perfil;
   display: flex;
   justify-content: space-between;
@@ -115,8 +120,31 @@ header {
   'description';
 }
 
+/* Main */
 main {
   grid-area: main;
+}
+
+.menu a {
+  display: grid;
+  grid-template-rows: 40px;
+  z-index: 11;
+  color: #000;
+}
+
+.menu span {
+  padding: 6px 10px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.menu li:hover {
+  background-color: rgb(192, 190, 190);
+  
+}
+
+.menu .selected {
+  border-bottom: 4px solid blue;
 }
 
 .menu {
@@ -127,28 +155,7 @@ main {
   text-align: center;
 }
 
-.menu a {
-  z-index: 100;
-  color: #000;
-}
-
-.menu span {
-  padding: 6px 15px;
-  margin: 0 auto;
-}
-.menu li {
-  z-index: 100;
-  padding: 10px;
-}
-
-.menu li:hover {
-  background-color: gray;
-  
-}
-
-.menu .selected {
-  border-bottom: 4px solid blue;
-}
+/* Footer */
 
 .footer-links {
   grid-area: footer-links;
@@ -160,7 +167,7 @@ main {
 
 .container-footer {
   display: grid;
-  grid-row: 40px 20px;
+  grid-row: auto auto;
   gap: 20px;
   grid-template-areas: 
     'footer-links'
@@ -168,12 +175,12 @@ main {
 }
 
 footer {
-  z-index: 100;
+  z-index: 11;
   grid-area: footer;
   width: 100%;
   bottom: 0;
   background-color: #86b2f8;
-  padding: 30px;
+  padding: 30px 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,7 +200,147 @@ body {
 
 /* feed.html */
 
-.timeLine {
+.pin-fixo {
+  grid-area: pin-fixo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.perfil-fixo {
+  grid-area: perfil-fixo;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.img-perfil {
+  grid-area: img-perfil;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-perfil > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+}
+
+.nick {
+  grid-area: nome;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.icon-20 {
+  width: 15px;
+  height: 15px;
+}
+
+.perfil-descricao-post > span {
+  grid-area: ponto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.perfil-descricao-post > p {
+  grid-area: data;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.status {
+  grid-area: status;
+  background-color: #dee2e6;
+  border-radius: 10px;
+  padding:  2px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.perfil-descricao-post {
+  grid-area: perfil-descricao-post;
   display: grid;
-  /* grid-template-rows: ; */
+  grid-template-columns: 80px 20px 100px;
+  grid-template-rows: 30px 30px;
+  grid-template-areas: 
+  'nome ponto data'
+  'status status status';
+}
+
+.perfil-descricao-post time {
+  padding: 0 5px;
+}
+
+.text-post {
+  grid-area: text-post;
+}
+
+.img-post {
+  grid-area: img-post;
+}
+
+.img-post > img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.post {
+  display: grid;
+  margin: 25px 0;
+  padding: 3% 10px;
+  gap: 10px;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 30px 60px auto auto;
+  grid-template-areas: 
+  'pin-fixo perfil-fixo 3'
+  'img-perfil perfil-descricao-post 3'
+  '1 text-post 3'
+  '1 img-post 3';
+}
+
+.post:hover {
+  border-radius: 10px;
+  background-color: rgb(192, 190, 190);
+}
+
+/* Sobre.html */
+
+.saudacao > h1 {
+  grid-area: saudacao-h1;
+}
+
+.saudacao > img {
+  grid-area: saudacao-img;
+}
+
+.sobre > .saudacao {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  grid-area: saudacao;
+  gap: 20px;
+}
+
+.sobre-texto {
+  grid-area: sobre-texto;
+}
+
+.sobre-texto > p {
+ padding: 10px 0;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 50px auto 50px;
+  grid-template-rows: 50px auto;
+  grid-template-areas: 
+  'saudacao saudacao 3'
+  '1 sobre-texto 3';
 }
