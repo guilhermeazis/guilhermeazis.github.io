@@ -1,9 +1,11 @@
+/* Selecionar elementos */
 const stars = document.querySelector('.container-header')
-console.log(stars)
+const selected = document.querySelector('.menu')
+
+/* Função gerar estrelas no header */
 const gerarEstrelas = () => {
     for (let index = 0; index < 150; index += 1) {
         const createStar = document.createElement('div')
-        console.log(createStar)
         createStar.className = `star${index}`
         createStar.style.position = 'absolute'
         createStar.style.backgroundColor = 'aliceblue'
@@ -16,6 +18,7 @@ const gerarEstrelas = () => {
     }
 }
 
+/* Navegar de forma sincrona entre as páginas do menu */
 const navegarViaAjax = (url, seletor, push = true) => {
     if (!url || !seletor) return
     const elemento = document.querySelector(seletor)
@@ -35,15 +38,24 @@ document.querySelectorAll('[gap-link]').forEach(link => {
     }
 })
 
-const selected = document.querySelector('.menu')
 selected.onclick = e => {
-    const select = document.querySelector('.selected')
-      if (select) {
+const select = document.querySelector('.selected')
+    if (select) {
         select.classList.remove('selected')
-      }
-      e.target.classList.add('selected')
+    }
+    e.target.classList.add('selected')   
+      
 }
 
+/* Carregar página inicial */
+const carregarInicial = () => {
+    const url = '../feed.html'
+    const destino = '.pagina'
+    navegarViaAjax(url, destino)
+}
+
+/* Ao carregar a página executa a função */
 window.onload = () => {
     gerarEstrelas()
+    carregarInicial()
 }
